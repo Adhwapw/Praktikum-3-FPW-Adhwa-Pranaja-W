@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MahasiswaController;
+use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,3 +22,5 @@ Route::get('/about', function () {
 
 Route::get('/home', [HomeController::class, 'home']);
 Route::get('/buku', [BukuController::class, 'index']);
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+
