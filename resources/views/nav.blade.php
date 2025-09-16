@@ -9,7 +9,7 @@
                     <li><a href="/" class="text-gray-600 hover:text-blue-500">Home</a></li>
                     <li><a href="/buku" class="text-gray-600 hover:text-blue-500">Buku</a></li>
                     <li><a href="/mobil" class="text-gray-600 hover:text-blue-500">Mobil</a></li>
-                    <li><a href="/galeri" class="text-gray-600 hover:text-blue-500">Galeri</a></li>
+                    <li><a href="/tentang" class="text-gray-600 hover:text-blue-500">Tentang</a></li>
                 </ul>
             </div>
         </div>

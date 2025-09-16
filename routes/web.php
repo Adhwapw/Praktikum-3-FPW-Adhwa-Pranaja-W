@@ -2,16 +2,18 @@
 
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\MobilController;
 use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
-//route galeri
-Route::get('/galeri', [GalleryController::class, 'index']);
+//route tentang
+Route::get('/tentang', function () {
+    return view('tentang');
+});
 
+//home
 Route::get('/home', [HomeController::class, 'index']);
 
 //route buku
