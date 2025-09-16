@@ -20,7 +20,7 @@
         <h2 class="text-2xl font-semibold text-gray-700 mb-3">Teknologi yang Digunakan</h2>
         <ul class="list-disc list-inside text-gray-600 space-y-2">
             <li><strong>Backend:</strong> Laravel</li>
-            <li><strong>Frontend:</strong> Blade & Tailwind CSS</li>
+            <li><strong>Frontend:</strong> Tailwind CSS</li>
             <li><strong>Database:</strong> MySQL</li>
         </ul>
     </div>
