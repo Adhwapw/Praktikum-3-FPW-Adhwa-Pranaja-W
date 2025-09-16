@@ -7,7 +7,7 @@ use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app');
 });
 
 // Route::get('/home', function () {
@@ -22,5 +22,7 @@ Route::get('/about', function () {
 
 Route::get('/home', [HomeController::class, 'home']);
 Route::get('/buku', [BukuController::class, 'index']);
+Route::get('/tambahBuku', [BukuController::class, 'create']);
+Route::post('/simpanBuku', [BukuController::class, 'store']);
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
 

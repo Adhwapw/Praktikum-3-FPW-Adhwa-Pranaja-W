@@ -12,4 +12,23 @@ class BukuController extends Controller
         $buku = Buku::all();
         return view('buku', compact('buku'));
     }
+
+    public function create()
+    {
+        return view('tambahBuku');
+    }
+
+    public function store(Request $request)
+    {
+        $validasi = $request->validate(
+            [
+                'judul' => 'required|string|max:255',
+                'pengarang' => 'required|string|max:255',
+                'penerbit' => 'required|string|max:255',
+            ]
+        );
+
+        Buku::create($validasi);
+        return redirect('/buku');
+    }
 }
