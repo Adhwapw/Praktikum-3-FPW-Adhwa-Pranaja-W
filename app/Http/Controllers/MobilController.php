@@ -9,13 +9,13 @@ class MobilController extends Controller
 {
     public function index()
     {
-        $mobils = Mobil::all(); // Mengambil semua data mobil
-        return view('mobil.index', compact('mobils'));
+        $mobil = Mobil::all(); 
+        return view('mobil', compact('mobil'));
     }
 
     public function create()
     {
-        return view('mobil.create');
+        return view('tambahMobil');
     }
 
     public function store(Request $request)
@@ -26,10 +26,8 @@ class MobilController extends Controller
             'warna' => 'required',
             'harga' => 'required|numeric',
         ]);
-
-        Mobil::create($request->all());
-
-        return redirect()->route('mobil.index')
-            ->with('success', 'Data mobil berhasil ditambahkan.');
+        
+        Mobil::create($request);
+        return redirect('/mobil');
     }
 }

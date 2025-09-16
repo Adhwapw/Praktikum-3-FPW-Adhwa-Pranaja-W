@@ -1,10 +1,9 @@
-{{-- resources/views/mobil/tambahMobil.blade.php --}}
 @extends('app')
 
 @section('content')
 <h1>Tambah Mobil Baru</h1>
 
-<form action="{{ route('mobil.store') }}" method="POST">
+<form action="/simpanMobil" method="POST">
     @csrf
     <div>
         <strong>Nama Mobil:</strong><br>

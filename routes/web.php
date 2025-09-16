@@ -23,7 +23,7 @@ Route::get('/tambahBuku', [BukuController::class, 'create']);
 Route::post('/simpanBuku', [BukuController::class, 'store']);
 
 //route mobil
-Route::get('/mobil', [MobilController::class, 'index'])->name('mobil.index');
-Route::get('/mobil/create', [MobilController::class, 'create'])->name('mobil.create');
-Route::post('/mobil', [MobilController::class, 'store'])->name('mobil.store');
+Route::get('/mobil', [MobilController::class, 'index']);
+Route::get('/tambahMobil', [MobilController::class, 'create']);
+Route::post('/simpanMobil', [MobilController::class, 'store']);
 

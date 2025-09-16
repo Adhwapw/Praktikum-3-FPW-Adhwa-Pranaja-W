@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Mobil extends Model
 {
     use HasFactory;
-
+    protected $table = 'mobil';
     protected $fillable = [
         'nama_mobil', 'merk', 'warna', 'harga'
     ];

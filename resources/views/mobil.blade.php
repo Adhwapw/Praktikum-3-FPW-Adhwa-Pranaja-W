@@ -4,7 +4,7 @@
 @section('content')
 <h1>Daftar Mobil</h1>
 
-<a href="{{ route('mobil.create') }}">Tambah Mobil Baru</a><br><br>
+<a href="/tambahMobil">Tambah Mobil Baru</a><br><br>
 
 @if ($message = Session::get('success'))
     <p style="color: green;">{{ $message }}</p>
@@ -18,7 +18,7 @@
         <th>Warna</th>
         <th>Harga</th>
     </tr>
-    @foreach ($data as $mobil)
+    @foreach ($mobil as $mobil)
     <tr>
         <td>{{ $loop->iteration }}</td>
         <td>{{ $mobil->nama_mobil }}</td>
