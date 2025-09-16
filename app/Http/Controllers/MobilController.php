@@ -27,7 +27,7 @@ class MobilController extends Controller
             'harga' => 'required|numeric',
         ]);
         
-        Mobil::create($request);
+        Mobil::create($request->all());
         return redirect('/mobil');
     }
 }

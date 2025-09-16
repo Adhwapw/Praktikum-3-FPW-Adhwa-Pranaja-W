@@ -1,23 +1,25 @@
 @extends('app')
 
-@Section('content')
-    <h1>Halaman Buku</h1>
+@section('content')
+    <h1 class="text-2xl font-bold mb-4">Daftar Buku</h1>
+    <a href="/tambahBuku" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block">
+        Tambah Buku
+    </a>
 
-    <a href="/tambahBuku"><button>Tambah buku</button></a>
-    <table border="1">
-        <thead>
+    <table class="min-w-full bg-white">
+        <thead class="bg-gray-800 text-white">
             <tr>
-                <th>judul</th>
-                <th>Pengarang</th>
-                <th>penerbit</th>
+                <th class="py-2 px-4">Judul</th>
+                <th class="py-2 px-4">Pengarang</th>
+                <th class="py-2 px-4">Penerbit</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="text-gray-700">
             @foreach ($buku as $buku)
-                <tr>
-                    <td>{{$buku -> judul}}</td>
-                    <td>{{$buku -> pengarang}}</td>
-                    <td>{{$buku -> penerbit}}</td>
+                <tr class="border-b">
+                    <td class="py-2 px-4">{{ $buku->judul }}</td>
+                    <td class="py-2 px-4">{{ $buku->pengarang }}</td>
+                    <td class="py-2 px-4">{{ $buku->penerbit }}</td>
                 </tr>
             @endforeach
         </tbody>
